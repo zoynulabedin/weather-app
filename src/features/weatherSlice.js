@@ -12,14 +12,14 @@ export const weatherSlice = createSlice({
 	reducers: [],
 	extraReducers: (builder) => {
 		builder
-			.addCase(fetchWeatherData.pending, (state, { type, payload }) => {
+			.addCase(fetchWeatherData.pending, (state) => {
 				state.loading = true;
 			})
-			.addCase(fetchWeatherData.fulfilled, (state, { type, payload }) => {
+			.addCase(fetchWeatherData.fulfilled, (state, {  payload }) => {
 				state.loading = false;
 				state.data = payload;
 			})
-			.addCase(fetchWeatherData.rejected, (state, { type, payload }) => {
+			.addCase(fetchWeatherData.rejected, (state, {payload }) => {
 				state.loading = false;
 				state.message = payload;
 			});
