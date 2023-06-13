@@ -1,10 +1,10 @@
-# Project Name
+# Weather App
 
-This is a brief description of your project.
+This is simple Weather app ,I used here redux toolkit , tailwind css and weatherapi (free)
 
 ## Demo
 
-Check out the live demo [here](https://www.example.com/demo).
+Check out the live demo [here](https://weather-app-devs.vercel.app/).
 
 ## Table of Contents
 
@@ -15,18 +15,7 @@ Check out the live demo [here](https://www.example.com/demo).
 
 ## Installation
 
-Instructions on how to install and run your project locally.
+Git clone 
+npm install
+npm run dev
 
-## Usage
-
-Guidelines on how to use your project or any relevant code examples.
-
-## Contributing
-
-Information on how others can contribute to your project. You can mention things like submitting bug reports, suggesting new features, or providing code contributions.
-
-## License
-
-Specify the license under which your project is distributed. For example:
-
-This project is licensed under the [MIT License](LICENSE).
