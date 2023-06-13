@@ -25,7 +25,7 @@ function Weather() {
 
 				dispatch(fetchWeatherData(city));
 			};
-		const isDaytime = data.current.is_day === 1;
+		const isDaytime = data?.current.is_day === 1;
 	
 	const bg = isDaytime ? weatherbg : nightbg;
      const style = {
