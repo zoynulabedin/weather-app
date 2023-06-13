@@ -15,17 +15,17 @@ export const weatherSlice = createSlice({
 			.addCase(fetchWeatherData.pending, (state) => {
 				state.loading = true;
 			})
-			.addCase(fetchWeatherData.fulfilled, (state, {  payload }) => {
+			.addCase(fetchWeatherData.fulfilled, (state, { payload }) => {
 				state.loading = false;
 				state.data = payload;
 			})
-			.addCase(fetchWeatherData.rejected, (state, {payload }) => {
+			.addCase(fetchWeatherData.rejected, (state, { payload }) => {
 				state.loading = false;
 				state.message = payload;
 			});
 	},
 });
-export const getWeatherData = (state) => state.data
+export const getWeatherData = (state) => state.data;
 
 // export const {} = weatherSlice.actions;
 export default weatherSlice.reducer;
