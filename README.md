@@ -7,8 +7,8 @@ This is simple Weather app ,I used here redux toolkit , tailwind css and weather
 Check out the live demo [here](https://weather-app-devs.vercel.app/).
 
 ## Installation
-
+```bash
 Git clone 
-npm install
-npm run dev
+$ npm install
+$ npm run dev
 
