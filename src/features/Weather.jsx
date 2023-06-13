@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import weatherbg from "../../public/cloud-blue-sky.jpg";
+import nightbg from "../../public/night.jpg";
 import './Weather.scss';
 import { fetchWeatherData } from "./weatherApi";
 import { getWeatherData } from "./weatherSlice";
@@ -24,16 +25,23 @@ function Weather() {
 
 				dispatch(fetchWeatherData(city));
 			};
+		const isDaytime = data.current.is_day === 1;
+	
+	const bg = isDaytime ? weatherbg : nightbg;
      const style = {
-				backgroundImage: `url(${weatherbg})`,
+				backgroundImage: `url(${bg})`,
 				backgroundSize: "cover",
 				backgroundRepeat: "no-repeat",
 				backgroundPosition: "center",
 				// additional CSS properties for the background
 			};
+	
+	
             
   return (
-		<div className="weather-body-wrapper mx-auto overflow-hidden" style={style}>
+		<div
+			className="weather-body-wrapper mx-auto overflow-hidden"
+			style={style}>
 			<div className="container w-6/12 mx-auto mt-28">
 				<div className="location-form text-center">
 					<form onSubmit={formSumbitHandler}>
